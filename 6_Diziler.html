@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <h1>Diziler(Arrays)</h1>
+
+    <p>
+
+
+    </p>
+
+    <script>
+        var dizi1 = [1, 2, "elma", true]; // aynı tipte veri atılması zorunluluğu yok.
+
+        var dizi2 = new Array(4);
+        dizi2[0] = "nur";
+        dizi2[1] = "bahar";
+        dizi2[2] = "leyla";
+        dizi2[3] = "ömer";
+
+        console.log(dizi2);
+
+        var dizi3 = new Array("batu", "ali");
+
+        console.log(dizi3);
+        console.log(dizi3.length);
+
+
+        var dizi4 = [];
+        dizi4.push(1);
+        dizi4.push(2);
+        dizi4.push(3);
+        console.log(dizi4);
+
+        // 1-5 arasındaki sayıları bir diziye ekleyiniz
+
+        var dizi5 = [];
+        for (var i = 0; i < 6; i++) {
+            dizi5.push(i);
+        }
+
+
+        // sort
+
+        console.log(dizi2.sort());
+        console.log(dizi2.sort().reverse());
+
+        // concat
+
+        console.log(dizi2.concat(dizi3));
+
+        //indexOf(x)
+
+        console.log(dizi2.indexOf("abc")); // kaydı bulamazsa -1 döner
+        console.log(dizi2.indexOf("ömer"));
+
+        // splice 
+
+        dizi2.splice(4, 1); // 4. index'ten başla, 1 tane elemn sil
+
+        console.log(dizi2);
+
+
+
+
+
+    </script>
+</body>
+</html>

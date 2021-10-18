@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <h1>Metotlar</h1>
+
+    <ul>
+        <li>Geri Değer Döndüren</li>
+        <li>Geri Değer Döndürmeyen</li>
+    </ul>
+
+    <h2>Hata yönetimi</h2>
+
+    <p>try catch</p>
+    <script>
+
+        function topla() {
+            debugger;
+            console.log(10 + 20);
+        }
+
+        function topla2(sayi1, sayi2) {
+            console.log(sayi1 + sayi2);
+        }
+
+        function topla3(sayi1, sayi2) {
+            return sayi1 + sayi2;
+        }
+
+        debugger;
+        topla();
+        topla2(10, 20);
+        var sonuc = topla3(29, 11);
+        console.log(sonuc);
+
+        function myFunction() {
+            try {
+                //hata alması muhtemel kodlar
+            } catch (e) {
+                console.log(e.message)
+            }
+        }
+        
+       
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <h1>Karar Yapilari</h1>
+
+    <p>
+        1- if-else <br />
+        2- switch-case <br />
+        3. Ternary - if
+    </p>
+
+
+
+
+    <script>
+        var gelenDeger = window.prompt("Kullanıcı adınızı giriniz");
+        console.log(gelenDeger);
+
+        // eger girilen değer admin ise hoşgeldiniz, editör ise selam yazdır, değilse giriş yapamazsın uyarısı versin.
+
+
+        if (gelenDeger.toLowerCase() == "admin") {
+            alert("Hoşgeldiniz!");
+            window.open("https://google.com", "_top"); // open'da açılan page'i değişkene atayabiliyoruz
+        }
+        else if (gelenDeger.toLowerCase() == "editör" {
+            alert("selam!");
+            window.location = "https://onedio.com";
+        }
+        else {
+            alert("Giriş yapamazsın!!");
+            window.close(); // açık olan tabi kapatır
+        }
+
+        switch (gelenDeger) {
+            case "nur":
+                console.log("selam nur");
+                break;
+        }
+
+    </script>
+</body>
+</html>

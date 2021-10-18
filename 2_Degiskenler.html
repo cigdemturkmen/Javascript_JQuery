@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <h1>Değişkenler</h1>
+
+    <p>
+        var degiskenAdi = deger; <br />
+
+    </p>
+
+    <h2>Değişken Veri Tipleri</h2>
+
+    <ul>
+        <li>Number</li>
+        <li>String</li>
+        <li>Boolean</li>
+        <li>Null</li>
+        <li>Undefined</li>
+    </ul>
+
+    <script language="javascript" type="text/javascript">
+        // bu attributeler SEO ile alakalı
+
+        var sayi1 = 10;
+
+        var isim = "Nur Öztürk";
+
+        var dogruMu = true;
+
+        // Büyük küçük harf duyarlılığı var. genellikle camelCase tanımlama yapıyoruz.
+
+        var harf1 = "A";
+        var harf2 = 'B';
+
+        var tanimsizDeger; //bunu undefined olarak görür.
+
+        var ogrenci = null;
+
+        var isimler = new Array(3); // bunu object olarak görür
+        isimler[0] = "Batu";
+        isimler[1] = "çiğdem0";
+
+        var iller = ["Ankara", "İstanbul", "İzmir"]; // object
+
+        var ogrenci1 = {
+            ad: "nur",
+            soyad: "Oztuk",
+            yas: 30,
+            mezunMu: true,
+        }; // object
+
+        // List<Ogrenci>
+
+        var ogrenciler = [
+            {
+                ad: "nur",
+                soyad: "Oztuk",
+                yas: 30,
+                mezunMu: true
+            },
+            {
+                ad: "nur",
+                soyad: "Oztuk",
+                yas: 30,
+                mezunMu: true
+            },
+            {
+                ad: "nur",
+                soyad: "Oztuk",
+                yas: 30,
+                mezunMu: true
+            }
+        ];
+        //typeof : degiskenin veri tipini almak için kullanılır.
+
+        console.log(typeof (isim));
+        console.log(typeof (sayi1));
+        console.log(typeof (ogrenci));
+        console.log(typeof (ogrenci1));
+        console.log(typeof (ogrenciler));
+        console.log(typeof (isimler));
+        console.log(typeof (tanimsizDeger));
+        console.log(typeof (harf1));
+
+        var sayi; //undefined
+        sayi = 10;
+        sayi = "Nur";
+
+    //---------------------------
+
+        var sayi2 = "20";
+
+        var sayisalSayi2 = Number(sayi2); // 20
+
+        console.log(sayisalSayi2 + 10);
+
+        var dolarKuru = "9.28";
+
+        var dolarKuru1 = Number(dolarKuru);
+
+        console.log(typeof (dolarKuru1));
+
+        // parseInt, parseFloat
+
+        console.log(parseInt(dolarKuru)); // 9
+
+        console.log(parseFloat(dolarKuru)); // 9.28
+
+        console.log(Number("Nur")); // NaN : not a number
+
+        console.log(sayisalSayi2.toString());
+
+        // Number.isNaN()
+
+        var s = Number("12as");
+        console.log(Number.isNaN(s)); // true
+    </script>
+
+    
+
+
+</body>
+</html>
