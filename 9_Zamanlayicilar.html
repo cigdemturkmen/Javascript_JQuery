@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <ul>
+        <li>setTimeOut</li> bu sayaç belirtilen süre sonra bir kez çalışır
+        <li>setInterval</li> belirtilen süre sonra tekrarlı bir şekilde çalışır
+    </ul>
+
+    <button onclick="sayaciDurdur()">   Durdur </button>
+
+    <button onclick="sayaciBaslat()">Baslat </button>
+
+    <script>
+        //setTimeout(function () {
+        //    alert(new Date());
+        //}, 5000);
+
+
+        var sayac;
+
+        function sayaciBaslat() {
+            setInterval(function () {
+                console.log(new Date());
+            }, 1000);
+        }
+
+        function sayaciDurdur() {
+            clearInterval(sayac);
+        }
+
+        
+    </script>
+</body>
+</html>

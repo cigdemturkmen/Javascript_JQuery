@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <h1>Web Storage</h1>
+
+    <p>tarayıcıda veri saklamak için kullanılan nesnelerdir.</p>
+
+    <ul>
+        <li>Local storage: tarayıcı kapatılsa bile değer silinmez</li>
+        <li>Session Storage: tarayıcı kapatıldığında tutulan değer silinir.(sekme kapatılınca da)</li>
+    </ul>
+    <p>
+        document.cookie = "";
+    </p>
+
+    <button onclick="localStorageEkle()">Local storage oluştur</button>
+
+    <button onclick="localStoragedanGetir()">Local storagedan getir</button>
+    <br />
+
+    <button onclick="sessionStorageEkle()">Local storage oluştur</button>
+
+    <button onclick="sessionStoragedanGetir()">Local storagedan getir</button>
+
+    <script>
+        function localStorageEkle() {
+            localStorage.setItem("ad", "nur");
+            localStorage.setItem("soyad", "Ozturk");
+        }
+
+        function localStoragedanGetir() {
+            localStorage.getItem("ad");
+        }
+
+        function sessionStorageEkle() {
+            sessionStorage.setItem("email", "cgdem.t@gmail.com");
+        }
+
+        function sessionStoragedanGetir() {
+            var mail = sessionStorage.getItem("email");
+            //silme
+            sessionStorage.removeItem("email");
+            localStorage.removeItem("soyad");
+        }
+
+        function cerezOlustur() {
+            // altgr + ;
+            // `${}` c# karşılığı $"{}"
+            document.cookie = `kullaniciAdi = nurozturk; expires=${new Date()}`;
+                
+        }
+    </script>
+</body>
+</html>

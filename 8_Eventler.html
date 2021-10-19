@@ -28,7 +28,35 @@
         <option value="35">İzmir</option>
     </select>
 
+    <input type="text" onkeypress="basilanTusuAl()" />
+
+    <input type="text" onkeypress=" return sadeceRakamaIzinVer()"  />
+
+    <input type="text" onkeyup="buyukHarfecevir(this)" />
+    <br />
+
+    <input type="password" id="txtSifre" name="passwordElement" value="" />
+    <p onmouseup="gizle()" onmousedown="goster()">Göster/Gizle</p>
     <script>
+        function gizle() {
+            console.log("up");
+            var element = document.getElementById("txtSifre");
+            console.log(element.value);  
+            element.type = "password";
+        }
+
+        function goster() {
+            console.log("down");
+            var element = document.getElementById("txtSifre"); // var element = document.getElementsByName("passwordElement")[0];
+            element.type = "text";
+            
+        }
+
+        function buyukHarfeCevir(e) {
+            var yazilanDeger = e.value;
+            e.value = e.value.toUpperCase();
+        }
+
         function tıkla() {
             alert("merhaba");
         }
@@ -38,6 +66,32 @@
             var secilen = e.value;
             console.log(secilen);
         }
+
+        function basilanTusuAl() {
+            var basilanTus = event.keyCode; //ascii decimal kısmı verir 10,100
+
+            console.log(basilanTus);
+
+            var basilanHarf = String.fromCharCode(basilanTus);
+
+            console.error(basilanHarf);
+            console.warn(basilanHarf);
+
+        }
+
+        function sadeceRakamaIzinVer() {
+            var basilanAsciiDec = event.keyCode;
+            if (basilanAsciiDec >= 48 && basilanAsciiDec <= 57) {
+                // rakam
+                return true;
+            }
+            else {
+                //rakam sışında bir şeye basılmıştır
+                return false;
+            }
+        }
+
+
     </script>
 </body>
 </html>
