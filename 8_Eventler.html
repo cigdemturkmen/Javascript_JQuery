@@ -3,7 +3,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
-    <title></title>
+    <title>Events</title>
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
@@ -11,7 +11,7 @@
     <h1>Events</h1>
 
     <p>
-        attribute olarak elementlerin eventlerini tanımlama yapabiliriz. <br />
+        attribute olarak elementlerin eventlerini tanımlama yapabiliriz. inline olarak... <br />
 
         onclick : bir elemente basıldığında
 
@@ -26,30 +26,37 @@
         <option value="6">Ankara</option>
         <option value="34">İstanbul</option>
         <option value="35">İzmir</option>
-    </select>
+    </select> <br />
 
-    <input type="text" onkeypress="basilanTusuAl()" />
+    basılan tuşu konsola yazdırır:
+    <input type="text" onkeypress="basilanTusuAl()" /> <br />
 
-    <input type="text" onkeypress=" return sadeceRakamaIzinVer()"  />
+    sadece rakam girilmesine izin verir:
+    <input type="text" onkeypress="return sadeceRakamaIzinVer()" /> <br />
 
-    <input type="text" onkeyup="buyukHarfecevir(this)" />
+    basılan tüm harfleri büyük harfe çevirir:
+    <input type="text" onkeyup="buyukHarfeCevir(this)" /> <br />
     <br />
 
+   
     <input type="password" id="txtSifre" name="passwordElement" value="" />
-    <p onmouseup="gizle()" onmousedown="goster()">Göster/Gizle</p>
+    <p onmouseup="gizle()" onmousedown="goster()">Göster/Gizle(buraya basarsan şifre görünür)</p>
+
+
+
     <script>
         function gizle() {
-            console.log("up");
+            console.log("up"); // bu satır öylesine yazıldı.
             var element = document.getElementById("txtSifre");
-            console.log(element.value);  
+            console.log(element.value);
             element.type = "password";
         }
 
         function goster() {
-            console.log("down");
+            console.log("down"); // bu satır öylesine yazıldı.
             var element = document.getElementById("txtSifre"); // var element = document.getElementsByName("passwordElement")[0];
             element.type = "text";
-            
+
         }
 
         function buyukHarfeCevir(e) {
@@ -57,7 +64,7 @@
             e.value = e.value.toUpperCase();
         }
 
-        function tıkla() {
+        function tikla() {
             alert("merhaba");
         }
 
@@ -76,7 +83,6 @@
 
             console.error(basilanHarf);
             console.warn(basilanHarf);
-
         }
 
         function sadeceRakamaIzinVer() {
@@ -90,8 +96,7 @@
                 return false;
             }
         }
-
-
     </script>
+
 </body>
 </html>

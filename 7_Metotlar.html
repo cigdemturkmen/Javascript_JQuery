@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE html>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
 <head>
     <meta charset="utf-8" />
     <title></title>
@@ -9,27 +9,31 @@
     <h1>Metotlar</h1>
 
     <ul>
-        <li>Geri Değer Döndüren</li>
-        <li>Geri Değer Döndürmeyen</li>
+        <li>Geri Değer Döndüren Metotlar</li>
+        <li>Geri Değer Döndürmeyen Metotlar</li>
     </ul>
 
     <h2>Hata yönetimi</h2>
 
     <p>try catch</p>
+
+
+
+
     <script>
 
         function topla() {
             debugger;
             console.log(10 + 20);
-        }
+        } // değer döndürmeyen metot
 
         function topla2(sayi1, sayi2) {
             console.log(sayi1 + sayi2);
-        }
+        } // değer döndürmeyen parametreli metot
 
         function topla3(sayi1, sayi2) {
             return sayi1 + sayi2;
-        }
+        } // değer döndüren metot
 
         debugger;
         topla();
@@ -44,9 +48,7 @@
                 console.log(e.message)
             }
         }
-        
-       
-
     </script>
+
 </body>
 </html>

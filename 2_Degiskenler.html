@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE html>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
 <head>
     <meta charset="utf-8" />
     <title></title>
@@ -10,7 +10,7 @@
 
     <p>
         var degiskenAdi = deger; <br />
-
+        Tüm değişkenlerin başına tipi ne olursa olsun var getiriyoruz.
     </p>
 
     <h2>Değişken Veri Tipleri</h2>
@@ -21,23 +21,24 @@
         <li>Boolean</li>
         <li>Null</li>
         <li>Undefined</li>
+        
     </ul>
 
     <script language="javascript" type="text/javascript">
-        // bu attributeler SEO ile alakalı
+        // bu attributeler SEO ile alakalı. zorunlu değil.
 
         var sayi1 = 10;
 
-        var isim = "Nur Öztürk";
+        var isim = "Nur Öztürk"; //string olarak görür
 
-        var dogruMu = true;
+        var dogruMu = true;  //boolean olarak görür
 
-        // Büyük küçük harf duyarlılığı var. genellikle camelCase tanımlama yapıyoruz.
+        // Javascriptte değişken isimlerinde büyük-küçük harf duyarlılığı var. genellikle camelCase tanımlama yapıyoruz.
 
         var harf1 = "A";
         var harf2 = 'B';
 
-        var tanimsizDeger; //bunu undefined olarak görür.
+        var tanimsizDeger; //bunu undefined olarak görür
 
         var ogrenci = null;
 
@@ -78,32 +79,32 @@
         ];
         //typeof : degiskenin veri tipini almak için kullanılır.
 
-        console.log(typeof (isim));
-        console.log(typeof (sayi1));
-        console.log(typeof (ogrenci));
-        console.log(typeof (ogrenci1));
-        console.log(typeof (ogrenciler));
-        console.log(typeof (isimler));
-        console.log(typeof (tanimsizDeger));
-        console.log(typeof (harf1));
+        console.log(typeof (isim)); //string
+        console.log(typeof (sayi1)); //number
+        console.log(typeof (ogrenci)); //object
+        console.log(typeof (ogrenci1)); //object
+        console.log(typeof (ogrenciler)); //object
+        console.log(typeof (isimler)); //object
+        console.log(typeof (tanimsizDeger)); //undefined
+        console.log(typeof (harf1)); //string
 
         var sayi; //undefined
         sayi = 10;
         sayi = "Nur";
 
-    //---------------------------
+        //---------------------------
 
         var sayi2 = "20";
 
-        var sayisalSayi2 = Number(sayi2); // 20
+        var sayisalSayi2 = Number(sayi2); // number tipine dönüştürdü 20'yi
 
-        console.log(sayisalSayi2 + 10);
+        console.log(sayisalSayi2 + 10);  //30
 
         var dolarKuru = "9.28";
 
         var dolarKuru1 = Number(dolarKuru);
 
-        console.log(typeof (dolarKuru1));
+        console.log(typeof (dolarKuru1)); // number
 
         // parseInt, parseFloat
 
@@ -113,16 +114,13 @@
 
         console.log(Number("Nur")); // NaN : not a number
 
-        console.log(sayisalSayi2.toString());
+        console.log(typeof (sayisalSayi2.toString())); //string
 
-        // Number.isNaN()
+        // Number.isNaN(sayix) -> "sayix is not a number?" sorusunu sorar.
 
         var s = Number("12as");
         console.log(Number.isNaN(s)); // true
     </script>
-
-    
-
 
 </body>
 </html>

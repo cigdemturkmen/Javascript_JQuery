@@ -3,18 +3,16 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
-    <title></title>
+    <title>Java script hakkında</title>
 
     <script>
         //javascript kodları bu alan içine yazılır.
 
-        funtion butonaTikla() {
-            alert('merhaba');
+        function butonaTikla() {
+            alert('merhaba')
         }
     </script>
 </head>
-
-
 <body>
 
     <h1>JS</h1>
@@ -36,19 +34,20 @@
 
     <h3>2.head bloguna script tagi ile tanımlama</h3>
     <input type="button" onclick="butonaTikla()" value="Buraya da tıkla!" />
+    
 
     <h3>Bodynin üzerinde script tagleri ile tanımlama</h3>
-    <button type="button" onclick="konsoldaGoster()">KOnsola mesaj yazdır</button>
+    <button type="button" onclick="konsoldaGoster()">Konsola mesaj yazdır</button>
 
     <h3>External js file</h3>
     <button type="button" onclick="ekranaYazdir()">Ekrana yazdır!</button>
 
     <script>
         function konsoldaGoster() {
-            console.log("buyazı F12 ile incele  ekranın ıaçtığınızda console tabında görünecek")
+            console.log("Bu yazı F12 ile incele ekranını açtığınızda console tabında görünecek.")
         }
     </script>
 
-    <script src="js/myJsFile.js"></script> <!--burada script taglerinin içine bir şey yazılmıyor.-->
+    <script src="js/myJsFile.js"></script> <!--burada script taglerinin içine bir şey yazılmıyor. Bu external soruce js-->
 </body>
 </html>

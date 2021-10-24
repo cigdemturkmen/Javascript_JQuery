@@ -1,14 +1,14 @@
 ﻿<!DOCTYPE html>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title></title>
+    <title>Web Storage</title>
 </head>
 <body>
     <h1>Web Storage</h1>
 
-    <p>tarayıcıda veri saklamak için kullanılan nesnelerdir.</p>
+    <p>Tarayıcıda veri saklamak için kullanılan nesnelerdir.</p>
 
     <ul>
         <li>Local storage: tarayıcı kapatılsa bile değer silinmez</li>
@@ -23,9 +23,9 @@
     <button onclick="localStoragedanGetir()">Local storagedan getir</button>
     <br />
 
-    <button onclick="sessionStorageEkle()">Local storage oluştur</button>
+    <button onclick="sessionStorageEkle()">Session storage oluştur</button>
 
-    <button onclick="sessionStoragedanGetir()">Local storagedan getir</button>
+    <button onclick="sessionStoragedanGetir()">Session storagedan getir</button>
 
     <script>
         function localStorageEkle() {
@@ -34,7 +34,8 @@
         }
 
         function localStoragedanGetir() {
-            localStorage.getItem("ad");
+            var strg = localStorage.getItem("ad");
+            console.log(strg);
         }
 
         function sessionStorageEkle() {
@@ -47,13 +48,13 @@
             sessionStorage.removeItem("email");
             localStorage.removeItem("soyad");
         }
-
+        
         function cerezOlustur() {
-            // altgr + ;
+            // altgr + ; -> ``
             // `${}` c# karşılığı $"{}"
-            document.cookie = `kullaniciAdi = nurozturk; expires=${new Date()}`;
-                
+            document.cookie = `kullaniciAdi = nurozturk; expires=${new Date()}`;     
         }
     </script>
+
 </body>
 </html>
